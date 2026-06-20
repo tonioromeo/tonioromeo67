@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TONIO ROMEO - Ultimate Brainrot Portal</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#080808,#1a0033,#001133);
+    color:white;
+    min-height:100vh;
+}
+
+header{
+    text-align:center;
+    padding:60px 20px;
+    background:linear-gradient(90deg,#ff00aa,#ff8800,#ffee00);
+    color:black;
+}
+
+header h1{
+    font-size:4rem;
+}
+
+header p{
+    font-size:1.3rem;
+    margin-top:10px;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    padding:15px;
+    background:#111;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    background:#222;
+    padding:10px 15px;
+    border-radius:8px;
+}
+
+section{
+    padding:40px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.1);
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:25px;
+}
+
+h2{
+    color:#ffd700;
+    margin-bottom:15px;
+}
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#ff8800;
+    color:black;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+input{
+    padding:10px;
+    width:100%;
+    border-radius:8px;
+    border:none;
+    margin-top:10px;
+}
+
+#auraDisplay{
+    font-size:3rem;
+    color:lime;
+}
+
+.fact{
+    margin-top:15px;
+    font-size:1.2rem;
+    color:#00ffcc;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#000;
+    margin-top:50px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🗿 TONIO ROMEO 🗿</h1>
+    <p>The Official Brainrot Headquarters</p>
+</header>
+
+<nav>
+    <a href="#lore">Lore</a>
+    <a href="#stats">Stats</a>
+    <a href="#aura">Aura Farm</a>
+    <a href="#facts">Brainrot Generator</a>
+    <a href="#community">Community Lore</a>
+</nav>
+
+<section id="lore">
+
+<div class="card">
+<h2>📖 Tonio Lore</h2>
+
+<p>
+Tonio Romeo is a completely fictional brainrot entity.
+Legends say he became the ultimate nonchalant sigma after
+surviving 500 consecutive Tung Tung Sahur incidents while
+listening to phonk edits at maximum volume.
+</p>
+
+<br>
+
+<p>
+According to ancient TikTok scrolls, Tonio once achieved
+so much aura that nearby calculators started displaying
+"999999999999".
+</p>
+</div>
+
+</section>
+
+<section id="stats">
+
+<div class="card">
+<h2>📊 Official Stats</h2>
+
+<ul>
+<li>Aura: Infinite</li>
+<li>Brainrot Power: 100%</li>
+<li>Nonchalant Level: Maximum</li>
+<li>Italian Brainrot Knowledge: Legendary</li>
+<li>Sigma Energy: Overflowing</li>
+<li>Costco Hotdog Consumption: Unmeasurable</li>
+</ul>
+
+</div>
+
+</section>
+
+<section id="aura">
+
+<div class="card">
+<h2>⚡ Aura Farming Simulator</h2>
+
+<p id="auraDisplay">0</p>
+
+<button onclick="gainAura()">
++ Aura
+</button>
+
+<p id="rank">
+Current Rank: Background NPC
+</p>
+
+</div>
+
+</section>
+
+<section id="facts">
+
+<div class="card">
+<h2>🎲 Random Brainrot Generator</h2>
+
+<button onclick="generateFact()">
+Generate Fact
+</button>
+
+<div class="fact" id="factBox">
+Press the button...
+</div>
+
+</div>
+
+</section>
+
+<section id="community">
+
+<div class="card">
+<h2>📝 Community Lore Builder</h2>
+
+<p>
+Add your own fictional Tonio Romeo lore:
+</p>
+
+<input id="loreInput"
+placeholder="Tonio once defeated 37 refrigerators in a chess tournament...">
+
+<button onclick="addLore()">
+Add Lore
+</button>
+
+<ul id="loreList" style="margin-top:20px;">
+</ul>
+
+</div>
+
+</section>
+
+<footer>
+Tonio Romeo™ Brainrot Portal |
+Entirely fictional parody website
+</footer>
+
+<script>
+
+let aura = 0;
+
+function gainAura(){
+
+    aura += Math.floor(Math.random()*250)+50;
+
+    document.getElementById("auraDisplay").textContent = aura;
+
+    let rank = "Background NPC";
+
+    if(aura > 500) rank = "Sigma Recruit";
+    if(aura > 2000) rank = "Certified Nonchalant";
+    if(aura > 5000) rank = "Brainrot Commander";
+    if(aura > 10000) rank = "Tung Tung Survivor";
+    if(aura > 25000) rank = "Aura Emperor";
+    if(aura > 50000) rank = "Tonio Disciple";
+
+    document.getElementById("rank").textContent =
+    "Current Rank: " + rank;
+}
+
+const facts = [
+
+"Tonio invented Thursdays twice.",
+
+"Tonio defeated a microwave in ranked combat.",
+
+"Tonio has 900000 aura while sleeping.",
+
+"Scientists fear Tonio's mewing streak.",
+
+"Tonio survived Tung Tung Sahur using only a spoon.",
+
+"Tonio taught fish how to swim.",
+
+"Tonio can hear Wi-Fi signals.",
+
+"Tonio once out-pizza'd the pizza.",
+
+"Tonio's aura caused a traffic jam in another dimension.",
+
+"Tonio won a staring contest against a mirror."
+
+];
+
+function generateFact(){
+
+const random =
+facts[Math.floor(Math.random()*facts.length)];
+
+document.getElementById("factBox")
+.textContent = random;
+
+}
+
+function addLore(){
+
+const input =
+document.getElementById("loreInput");
+
+if(input.value.trim() === "")
+return;
+
+const li =
+document.createElement("li");
+
+li.textContent = input.value;
+
+document
+.getElementById("loreList")
+.appendChild(li);
+
+input.value = "";
+
+}
+
+</script>
+
+</body>
+</html>
